@@ -1,0 +1,63 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+@import "../bootstrap/functions";
+$primary:#4365C9;
+$secondary:#728CD7;
+@import "../bootstrap/bootstrap";
+
+html, body{height:100%}
+body {background-color:#4365C9;color:#FFF;}
+main{padding-bottom:20px;}
+
+.login .wrapper, .register .wrapper{width:300px}
+
+.panel{color:#607ED2;}
+.panel-header{
+	display:flex;
+    justify-content: space-between;
+}
+.panel-body p:last-child{margin-bottom:0}
+
+body{
+	& .modal p, & .modal h5{color:#607ED2;}
+	& .modal p{margin-bottom:0}
+
+	& .form-control{box-shadow: inset 0 0 10px rgba(#000000,.4);color:#607ED2;padding-left: 42px;}
+	& .form-control:focus{box-shadow: inset 0 0 10px rgba(#000000,.3), 0 0 0 0.25rem rgba(#FFFFFF,.25);color:#607ED2}
+	
+	& .login-form a{color:#FFF;text-decoration:none}
+	& .login-form a:hover{text-decoration:underline}
+}
+
+
+.login-form .logo{text-align:center;padding-bottom:30px}
+
+.input-group-text{
+	background:none;
+	border:none;
+	color:#607ED2;
+	font-size:26px;
+	padding: .375rem 0.55rem;
+	position: absolute;
+	
+	&::before{font-size:26px;}
+	&.bi-envelope-fill{padding: .600rem 0.70rem;}
+}
+
+.mb-3 + button{margin-top:1rem;}
+.mb-3 + button:last-child{margin-top:0;}
+button + .mb-3{margin-top:1rem;}
+
+.btn-primary.btn-block, .devices .list-group-item{
+	border:none;color:#728CD7;
+	&::before{font-size:64px;line-height: 128px;vertical-align:middle}
+	&:active {border:none;color:#728CD7 !important;}
+	&:hover {border:none;color:#4365C9 !important;box-shadow:0 0 0 0.25rem rgba(#FFFFFF,.25);}
+}
+
+.devices{
+	& h2{color:#FFF}
+	& .list-group-item{padding: 0.5rem 0.5rem;}
+	& .list-group-item + .list-group-item{margin-top:10px;}
+	& .list-group-item h4{margin-bottom:0}
+	& .list-group-item .icon{border:1px solid #728CD7;padding:5px;}
+}

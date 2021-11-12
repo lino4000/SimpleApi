@@ -55,3 +55,5 @@ build/
 
 ### VS Code ###
 .vscode/
+
+/src/main/resources/static/theme/bootstrap

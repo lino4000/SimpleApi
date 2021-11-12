@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang=en>
+	<head>
+		<meta charset=utf-8>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>PetFinder</title>
+		<link rel="stylesheet" href="/theme/style.css">
+		<link rel="shortcut icon" href="/theme/favicon.png" />
+		<script type="text/javascript" src="/js/functions.js"></script>
+	</head>
+	<body class="dark register">
+		<div id="responder" class="modal fade" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Modal title</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p>Modal body text goes here.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper h-100 container-fluid">
+			<div class="row h-100 justify-content-center align-items-center">
+				<div class="login-form col">
+					<div class="logo">
+						<img src="/img/logo.png" />
+					</div>
+					<form id="send" th:action="@{/register}" th:object="${user}" method="post">
+						<div class="mb-3">
+							<label for="user" class="form-label">Usuário</label>
+							<span class="input-group-text bi bi-person-fill">
+              </span>
+							<input type="text" class="form-control" id="user" aria-describedby="userlHelp" th:field="*{username}" >
+						</div>
+						<div class="mb-3">
+							<label for="email" class="form-label">Email</label>
+							<span class="input-group-text bi bi-envelope-fill">
+              </span>
+							<input type="email" class="form-control" id="email" aria-describedby="emailHelp" th:field="*{email}">
+						</div>
+						<div class="mb-3">
+							<label for="password1" class="form-label">Senha</label>
+							<span class="input-group-text bi bi-key-fill">
+              </span>
+							<input type="password" class="form-control" id="password1" aria-describedby="password1Help" th:field="*{password}">
+						</div>
+						<div class="mb-3">
+							<label for="password2" class="form-label">Confirmar senha</label>
+							<span class="input-group-text bi bi-key-fill">
+              </span>
+							<input type="password" class="form-control" id="password2" aria-describedby="password2Help" th:field="*{passwordConfirmation}">
+						</div>
+						<input type="submit" class="btn btn-secondary w-100 text-light" value="Criar" />
+						<div class="mb-3">
+							<a href="#" data-bs-toggle="modal" data-bs-target="#test">Voltar</a>
+							<p id="demo"></p>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+	</body>
+</html>
